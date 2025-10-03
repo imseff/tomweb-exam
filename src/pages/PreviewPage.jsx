@@ -1,9 +1,9 @@
-import Navbar from '../components/Navbar.jsx'
+import Footer from "../components/Footer/Footer.jsx"
 
 function PreviewPage() {
   return (
     <div>
-      <Navbar/>
+      <Footer/>
     </div>
   )
 }
