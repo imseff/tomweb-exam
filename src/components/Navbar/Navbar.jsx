@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styles from './Navbar.module.css'; // filename should be Navbar.module.css
+import styles from './Navbar.module.css'; 
 
 function Navbar() {
   return (
@@ -7,10 +7,10 @@ function Navbar() {
       <span className={styles.navName}>Webino Blogs</span>
       <ul className={styles.navList}>
         <li className={styles.navItem}>
-          <Link to="/section/latest">LATEST</Link>
+          <Link to="/section/latest">REPORTS</Link>
         </li>
         <li className={styles.navItem}>
-          <Link to="/section/reports">REPORTS</Link>
+          <Link to="/section/reports">BLOGS</Link>
         </li>
         <li className={styles.navItem}>
           <Link to="/section/sports">SPORTS</Link>

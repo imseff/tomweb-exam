@@ -1,4 +1,5 @@
 import Footer from "../components/Footer/Footer.jsx"
+import Navbar from "../components/Navbar/Navbar.jsx"
 
 function PreviewPage() {
   return (
@@ -8,4 +9,4 @@ function PreviewPage() {
   )
 }
 
-export default PreviewPage
+export default PreviewPage;
