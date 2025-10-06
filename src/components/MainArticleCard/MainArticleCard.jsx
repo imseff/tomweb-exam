@@ -1,6 +1,6 @@
-import styles from "./ArticleCard.module.css";
+import styles from "./MainArticleCard.module.css";
 
-function ArticleCard({ image, label, date, caption }) {
+function MainArticleCard({ image, label, date, caption, description }) {
   return (
     <div className={styles.cardContainer}>
       {/* Image section */}
@@ -19,8 +19,12 @@ function ArticleCard({ image, label, date, caption }) {
       <div className={styles.caption}>
         {caption}
       </div>
+
+      <div className={styles.description}>
+        {description}
+      </div>
     </div>
   );
 }
 
-export default ArticleCard;
+export default MainArticleCard;

@@ -1,18 +1,21 @@
 .cardContainer {
-  width: 220px;
+  width: 1080px;
+  height: 220px;
   display: flex;
-  flex-direction: column;
   gap: 15px;
+  transition: transform 0.3s ease; /* smooth card scale on hover */
 }
 
 .imageWrapper {
   position: relative;
-  width: 100%;
-  height: 140px;
-  overflow: hidden;
+  width: 346px;
+  height: 100%;
   border-radius: 10px;
+  background-color: red;
+  overflow: hidden;
 }
 
+/* Image */
 .image {
   width: 100%;
   height: 100%;
@@ -20,7 +23,7 @@
   object-fit: cover;
 }
 
-/* ✅ Hover gradient overlay */
+/* Hover gradient overlay */
 .imageWrapper::after {
   content: "";
   position: absolute;
@@ -28,29 +31,35 @@
   background: linear-gradient(
     180deg,
     rgba(13, 14, 16, 0) 0%,
-    rgba(13, 14, 16,0) 36.46%,
+    rgba(13, 14, 16, 0) 36.46%,
     #0D0E10 100%
   );
   opacity: 0;
   border-radius: 10px;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.4s ease; /* smooth fade */
 }
 
 .cardContainer:hover .imageWrapper::after {
   opacity: 1;
 }
 
-/* ✅ Caption color change on hover */
-.cardContainer:hover .caption {
-  color: rgba(25, 26, 28, 1); /* change this color as you like */
+/* Card details */
+.cardDetails {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0 25px 25px;
+  gap: 15px;
+  flex: 1;
+  transition: all 0.3s ease;
 }
 
+/* Label and date */
 .labelDate {
   width: 100%;
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 .label {
@@ -64,17 +73,30 @@
 .date {
   font-family: 'IBMPlexSans';
   font-weight: 400;
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
+/* Caption */
 .caption {
   font-family: 'IBMPlexSerif';
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.5rem;
   width: 100%;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   overflow: hidden;
+  transition: color 0.4s ease; /* smooth color change */
+}
+
+.cardContainer:hover .caption {
+  color: rgba(25, 26, 28, 0.514);
+}
+
+/* Description */
+.description {
+  font-family: 'IBMPlexSans';
+  font-size: 1rem;
+  font-weight: 400;
 }

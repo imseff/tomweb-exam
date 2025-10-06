@@ -16,6 +16,11 @@
   cursor: pointer;
 }
 
+.navName a{
+  text-decoration: none;
+  color: inherit;
+}
+
 .navList {
   display: flex;
   justify-content: space-between;
@@ -31,6 +36,3 @@
   color: inherit;  /* or your custom color */
 }
 
-.navItem {
-  
-}
