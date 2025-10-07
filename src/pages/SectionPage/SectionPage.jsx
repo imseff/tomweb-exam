@@ -38,7 +38,7 @@ function SectionPage() {
   const sectionColor = sectionColors[sectionName] || "#ffffff";
 
   return (
-    <div className={styles.landingContainer}>
+    <div className={styles.sectionContainer}>
       <div className={styles.sectionHeading} style={{ backgroundColor: sectionColor }}>
         <h1 className={styles.sectionTitle}>{sectionTitle}</h1>
         <p className={styles.sectionDescription}>{sectionDescription}</p>

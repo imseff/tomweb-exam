@@ -129,17 +129,16 @@
   gap: 30px;
 }
 
-.articlesContainer {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; /* optional: allows wrapping on smaller screens */
-}
-
 .articlesTitle {
   font-family: 'IBMPlexSerif';
   font-weight: 700;
   font-size: 1.5rem;
+}
+
+.articlesContainer {
+  width: 100%;
+  display: flex;
+  gap: 67px;
 }
 
 .mainArticlesBodyContainer{
@@ -159,8 +158,7 @@
 .mainArticlesContainer {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; /* optional: allows wrapping on smaller screens */
+  gap: 52px;
 }
 
 .mainArticlesTitle {

@@ -1,4 +1,4 @@
-.landingContainer{
+.sectionContainer{
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -8,6 +8,7 @@
 
 .articlesContainer{
   display: flex;
+  width: 100%;
   flex-direction: column;
   gap: 60px;
   padding: 60px 0;

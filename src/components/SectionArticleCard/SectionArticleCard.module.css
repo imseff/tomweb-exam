@@ -1,6 +1,5 @@
 .cardContainer {
-  width: 1080px;
-  height: 220px;
+  width: 100%;
   display: flex;
   gap: 15px;
   transition: transform 0.3s ease; /* smooth card scale on hover */
@@ -8,10 +7,10 @@
 
 .imageWrapper {
   position: relative;
-  width: 346px;
+  width: 100%;
+  max-width: 346px;
   height: 100%;
   border-radius: 10px;
-  background-color: red;
   overflow: hidden;
 }
 

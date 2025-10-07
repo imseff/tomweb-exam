@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import { sectionArticles } from './data/sectionArticles.js';
 import LandingPage from './pages/LandingPage/LandingPage';
 import SectionPage from './pages/SectionPage/SectionPage.jsx';
 import ArticleDetail from './pages/ArticleDetail/ArticleDetail.jsx';
@@ -12,9 +11,9 @@ function App() {
     <>
       <Navbar/>
       <Routes>
-        <Route path='/' element={<LandingPage />} /> 
+        <Route path='/' element={<ArticleDetail />} /> 
         <Route path="/section/:sectionName" element={<SectionPage />} />
-        <Route path="/article/:id" element={<ArticleDetail />} />
+        <Route path="/article" element={<ArticleDetail />} />
       </Routes>
       <Footer/>
     </>

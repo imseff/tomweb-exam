@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./SectionArticleCard.module.css";
 
 function SectionArticleCard({ image, label, date, caption, description }) {

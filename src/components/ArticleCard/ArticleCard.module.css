@@ -1,5 +1,5 @@
 .cardContainer {
-  width: 220px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -40,10 +40,6 @@
   opacity: 1;
 }
 
-/* ✅ Caption color change on hover */
-.cardContainer:hover .caption {
-  color: rgba(25, 26, 28, 1); /* change this color as you like */
-}
 
 .labelDate {
   width: 100%;
@@ -77,4 +73,10 @@
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+
+/* ✅ Caption color change on hover */
+.cardContainer:hover .caption {
+  color: rgba(25, 26, 28, 0.514);
 }

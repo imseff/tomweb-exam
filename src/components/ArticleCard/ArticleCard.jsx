@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./ArticleCard.module.css";
 
 function ArticleCard({ image, label, date, caption }) {
