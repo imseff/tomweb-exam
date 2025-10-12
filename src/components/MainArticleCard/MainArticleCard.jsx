@@ -10,19 +10,18 @@ function MainArticleCard({ image, label, date, caption, description }) {
       </div>
 
       {/* Label and date */}
-      <div className={styles.labelDate}>
-        <span className={styles.label}>{label}</span>
-        <span>•</span>
-        <span className={styles.date}>{date}</span>
-      </div>
-
-      {/* Caption / description */}
-      <div className={styles.caption}>
-        {caption}
-      </div>
-
-      <div className={styles.description}>
-        {description}
+      <div className={styles.cardDetails}>
+        <div className={styles.labelDate}>
+          <span className={styles.label}>{label}</span>
+          <span>•</span>
+          <span className={styles.date}>{date}</span>
+        </div>
+        <div className={styles.caption}>
+          {caption}
+        </div>
+        <div className={styles.description}>
+          {description}
+        </div>
       </div>
     </div>
   );

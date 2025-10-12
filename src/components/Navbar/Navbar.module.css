@@ -1,22 +1,27 @@
 .navbar {
   width: 100%;
   height: 100%;
-  min-width: 1280px;
+  max-width: 80rem; /* 1280px / 16 */
   background-color: #191A1C;
-  padding: 24px 100px;
+  padding: 1.5rem 6.25rem; /* 24px 100px / 16 */
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
+  position: relative;
 }
 
-.navName{
+.navName {
   font-size: 1.5rem;
   font-family: 'IBMPlexSerif', sans-serif;
   cursor: pointer;
 }
 
-.navName a{
+.mobileNavName{
+  display: none;
+}
+
+.navName a {
   text-decoration: none;
   color: inherit;
 }
@@ -26,13 +31,120 @@
   justify-content: space-between;
   list-style-type: none;
   font-family: 'IBMPlexSans';
-  width: 275px;
+  width: 100%;
+  max-width: 17.1875rem; /* 275px / 16 */
   font-weight: 600;
   cursor: pointer;
 }
 
 .navList a {
+  position: relative;
   text-decoration: none;
-  color: inherit;  /* or your custom color */
+  color: inherit;
 }
 
+.navList a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.03125rem; /* -0.5px / 16 */
+  width: 100%;
+  height: 0.0625rem; /* 1px / 16 */
+  background-color: white;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.navList a:hover::after {
+  opacity: 1;
+}
+
+.hamburgerBtn{
+  display: none;
+  position: absolute;
+  left: 2.5rem;
+  top: 1.6667rem;
+  bottom: 1.6667rem;
+  background-color: inherit;
+  border: none;
+}
+
+.icon{
+  width: 100%;
+  height: 100%;
+  filter: invert(1);
+}
+
+.xBtn{
+  width: 14px;
+  height: 14px;
+  filter: invert(0);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) { 
+  .navList{
+    max-width: 14rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar{
+    padding: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navName{
+    display: none;
+  }
+
+  .navList{
+    display: none;
+    
+  }
+
+  .mobileNavName{
+    display: block;
+    font-family: 'IBMPlexSerif';
+    font-size: 2rem;
+  }
+
+  .mobileNavName a{
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .hamburgerBtn{
+    display:block;
+  }
+
+  .active{
+    position: absolute;
+    bottom: -140px;
+    left: 0;
+    right: 0;
+    top: 60px;
+    background-color:#191A1C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    z-index: 10;
+    max-width: 320px;
+    opacity: 1;
+  }
+
+  .active a{
+    text-decoration: none;
+    color: inherit;
+    font-family: 'IBMPlexSans';
+    font-weight: 600;
+    font-size: 1.38rem;
+  }
+
+  .active li{
+    list-style-type: none;
+  }
+}

@@ -1,5 +1,4 @@
-// src/pages/SectionPage/SectionPage.jsx
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import SectionArticleCard from "../../components/SectionArticleCard/SectionArticleCard.jsx";
 import { sectionArticles } from "../../data/sectionArticles.js";
 import styles from "./SectionPage.module.css";
@@ -32,28 +31,35 @@ function SectionPage() {
     sports: "rgba(187, 112, 130, 1)",
   };
 
-
   const sectionTitle = sectionTitles[sectionName] || "Section";
   const sectionDescription = sectionDescriptions[sectionName] || "";
   const sectionColor = sectionColors[sectionName] || "#ffffff";
 
   return (
     <div className={styles.sectionContainer}>
-      <div className={styles.sectionHeading} style={{ backgroundColor: sectionColor }}>
+      <div 
+        className={styles.sectionHeading} 
+        style={{ backgroundColor: sectionColor }}
+      >
         <h1 className={styles.sectionTitle}>{sectionTitle}</h1>
         <p className={styles.sectionDescription}>{sectionDescription}</p>
       </div>
 
       <div className={styles.articlesContainer}>
         {articles.map((article, index) => (
-          <SectionArticleCard
+          <Link 
+            to="/article" 
+            className={styles.articleLink} 
             key={index}
-            image={article.image}
-            label={article.label}
-            date={article.date}
-            caption={article.caption}
-            description={article.description}
-          />
+          >
+            <SectionArticleCard
+              image={article.image}
+              label={article.label}
+              date={article.date}
+              caption={article.caption}
+              description={article.description}
+            />
+          </Link>
         ))}
       </div>
     </div>
