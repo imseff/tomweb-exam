@@ -129,7 +129,7 @@
 .articles {
   display: flex;
   flex-direction: column;
-  gap: 1.875rem; /* 30px / 16 */
+  gap: 1.75rem; 
 }
 
 .articlesTitle {
